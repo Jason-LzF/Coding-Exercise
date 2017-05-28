@@ -1,0 +1,13 @@
+Instruction on how to use the web server(the main program):
+1. Download all the files(filter.go, filter_test.go and vulns.json) and put them into the same workspace
+2. Use go build filter.go command
+3. Type in filter and then press enter
+4. At this point, it is listening on the given address:port(":9999", in filter.go). Then open the web browser and type in the http request: http://localhost:9999/?...... where "......" is the query parameters. For instance, if severity_at_least=8, since=2016-01-03, limit=21 then the http request will
+be http://localhost:9999/?severity_at_least=8&since=2016-01-03&limit=21(the order of parameters can be 
+different).
+5. After the web server handles a http request, stop the running of filter.go(e.g., use control+C) and then run the program
+again. At this point, another http request can be handled and the response can be seen on the screen.
+6. Every time before sending a new http request, do step 5.
+
+Note: please use the vulns.json file uploaded since there is very little modification on the data file in
+order to make it be successfully decoded into Go values.
