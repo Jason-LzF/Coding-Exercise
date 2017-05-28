@@ -1,0 +1,7 @@
+Instruction on how to use filter_test.go:
+1. Download all the files(filter.go, filter_test.go and vulns.json) and put them into the same workspace
+2. Use go test command
+3. Inside the filter_test.go, there are comments which explain how to test different erroneous/strange input. Make sure each time only one test function is used.
+
+Note: please use the vulns.json file uploaded since there is very little modification on the data file in
+order to make it be successfully decoded into Go values.
