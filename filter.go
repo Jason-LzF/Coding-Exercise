@@ -100,7 +100,7 @@ func (vul vulHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	var invalid int
 	// refDate consists of three different valid input formats of date
 	// Since the actual input format of date is unknown, here three usual
-	// formats of date are considered as valid.
+	// formats of date are considered as valid. 
 	refDate := []string{refDateA, refDateB, refDateC}
 	// obtain the correct parameters and deal with erroneous input
 	for name, val := range r.URL.Query() {
