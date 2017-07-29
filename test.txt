@@ -1,0 +1,6 @@
+Instruction on how to use filter_test.go:
+1. Download all the files and put them into the same workspace
+2. Use go test command
+3. Inside the filter_test.go, there are multiple tests for valid and erroneous or strange input. For detailed description of tests refer to comments in the filter_test.go.
+
+Note: please use all the JSON files uploaded for the filter_test.go.
