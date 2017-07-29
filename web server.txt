@@ -1,0 +1,13 @@
+Instruction on how to use the web server(filter.go):
+1. Download all the files and put them into the same workspace
+2. Use go build filter.go command
+3. Type in filter and then press enter
+4. At this point, it is listening on the given address:port(":9999", in filter.go). Then open the web browser and type in the http request: http://localhost:9999/?...... where "......" is the query parameters. For instance, if severity_at_least=8, since=2016-01-03, limit=21 then the http request will
+be http://localhost:9999/?severity_at_least=8&since=2016-01-03&limit=21(the order of parameters can be 
+different).
+5. At this point, a response can be seen on the screen.
+6. A http request with different parameters may be typed in the web browser to generate a different list of vulnerabilities when filter.go is running.
+7. "control+C" can be used to terminate the program.
+
+Note: please use the vulns.json file uploaded since there is very little modification on the data file in
+order to make it be successfully decoded into Go values.
